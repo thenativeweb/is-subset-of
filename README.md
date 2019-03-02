@@ -24,6 +24,7 @@ console.log(isSubsetOf(
   [ 2, 3, 5, 7, 11 ]
 ));
 // => true
+
 console.log(isSubsetOf(
   { name: 'the native web' },
   { name: 'the native web', city: 'Riegel am Kaiserstuhl' },
@@ -41,6 +42,7 @@ console.log(isSubsetOf.structural(
   { name: 'the native web', city: 'Riegel am Kaiserstuhl' }
 ));
 // => true
+
 console.log(isSubsetOf.structural(
   { firstName: 'Golo', lastName: 'Roden' },
   { name: 'the native web' }

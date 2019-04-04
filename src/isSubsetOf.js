@@ -134,11 +134,11 @@ isSubsetOf.structural = function (subset, superset, visited = []) {
     const supersetValue = superset[subsetKey];
 
     if (subsetValueType === 'object') {
-      if (visited.includes(subsetValueType)) {
+      if (visited.includes(subsetValue)) {
         continue;
       }
 
-      visited.push(subsetValueType);
+      visited.push(subsetValue);
 
       try {
         const isInSuperset = isSubsetOf.structural(subsetValue, supersetValue, visited);

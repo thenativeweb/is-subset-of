@@ -6,6 +6,10 @@
     {
       "name": "Golo Roden",
       "email": "golo.roden@thenativeweb.io"
+    },
+    {
+      "name": "Henrik Fuchs",
+      "email": "atheck@gmail.com"
     }
   ],
   "main": "dist/isSubsetOf.js",

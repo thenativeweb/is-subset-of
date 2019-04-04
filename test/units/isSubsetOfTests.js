@@ -228,5 +228,23 @@ suite('isSubsetOf', () => {
         assert.that(isSubsetOf.structural(subset, superset)).is.false();
       }
     });
+
+    suite('recursion', () => {
+      test('stops if recursion is detected.', async () => {
+        const subsetObject = { };
+        const supersetObject = { };
+
+        subsetObject.key = subsetObject;
+        supersetObject.key = supersetObject;
+
+        const pairs = [
+          { subset: subsetObject, superset: supersetObject }
+        ];
+
+        for (const { subset, superset } of pairs) {
+          assert.that(isSubsetOf.structural(subset, superset)).is.true();
+        }
+      });
+    });
   });
 });

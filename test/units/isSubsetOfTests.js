@@ -2,7 +2,7 @@
 
 const assert = require('assertthat');
 
-const isSubsetOf = require('../../src/isSubsetOf');
+const isSubsetOf = require('../../lib/isSubsetOf');
 
 suite('isSubsetOf', () => {
   test('is a function.', async () => {

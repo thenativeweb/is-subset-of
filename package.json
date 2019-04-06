@@ -12,14 +12,13 @@
       "email": "atheck@gmail.com"
     }
   ],
-  "main": "dist/isSubsetOf.js",
+  "main": "lib/isSubsetOf.js",
   "dependencies": {
-    "@babel/runtime": "7.3.4",
     "typedescriptor": "1.0.0"
   },
   "devDependencies": {
     "assertthat": "2.0.3",
-    "roboter": "4.0.0"
+    "roboter": "4.0.3"
   },
   "repository": {
     "type": "git",

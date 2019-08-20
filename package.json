@@ -1,6 +1,6 @@
 {
   "name": "is-subset-of",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "is-subset-of verifies whether an array or an object is a subset.",
   "contributors": [
     {

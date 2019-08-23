@@ -26,6 +26,8 @@ First you need to add a reference to is-subset-of to your application:
 const isSubsetOf = require('is-subset-of').default;
 ```
 
+If you use TypeScript, use the following code instead:
+
 ```typescript
 import isSubsetOf from 'is-subset-of';
 ```

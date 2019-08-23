@@ -1,34 +1,15 @@
-'use strict';
+import assert from 'assertthat';
+import isSubsetOf from '../../lib/isSubsetOf';
 
-const assert = require('assertthat');
-
-const isSubsetOf = require('../../lib/isSubsetOf');
-
-suite('isSubsetOf', () => {
-  test('is a function.', async () => {
-    assert.that(isSubsetOf).is.ofType('function');
-  });
-
-  test('throws an error if the given subset is an unsupported type.', async () => {
-    assert.that(() => {
-      isSubsetOf('the native web', []);
-    }).is.throwing(`Type 'string' is not supported.`);
-  });
-
-  test('throws an error if the given superset is an unsupported type.', async () => {
-    assert.that(() => {
-      isSubsetOf([], 42);
-    }).is.throwing(`Type 'number' is not supported.`);
-  });
-
-  test('throws an error if the given subset and superset are of distinct types.', async () => {
-    assert.that(() => {
+suite('isSubsetOf', (): void => {
+  test('throws an error if the given subset and superset are of distinct types.', async (): Promise<void> => {
+    assert.that((): void => {
       isSubsetOf([], {});
     }).is.throwing(`Types 'array' and 'object' do not match.`);
   });
 
-  suite('array', () => {
-    test('returns true if the given subset is actually a subset of the given superset.', async () => {
+  suite('array', (): void => {
+    test('returns true if the given subset is actually a subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: [], superset: []},
         { subset: [], superset: [ 2 ]},
@@ -50,7 +31,7 @@ suite('isSubsetOf', () => {
       }
     });
 
-    test('returns false if the given subset is not a subset of the given superset.', async () => {
+    test('returns false if the given subset is not a subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: [ 2 ], superset: []},
         { subset: [ 2 ], superset: [ 3 ]},
@@ -70,8 +51,8 @@ suite('isSubsetOf', () => {
     });
   });
 
-  suite('object', () => {
-    test('returns true if the given subset is actually a subset of the given superset.', async () => {
+  suite('object', (): void => {
+    test('returns true if the given subset is actually a subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: {}, superset: {}},
         { subset: {}, superset: { name: 'the native web' }},
@@ -89,7 +70,7 @@ suite('isSubsetOf', () => {
       }
     });
 
-    test('returns false if the given subset is not a subset of the given superset.', async () => {
+    test('returns false if the given subset is not a subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: { name: 'the native web' }, superset: {}},
         { subset: { name: 'the native web', city: 'Riegel am Kaiserstuhl' }, superset: { name: 'the native web' }},
@@ -108,8 +89,8 @@ suite('isSubsetOf', () => {
     });
   });
 
-  suite('null', () => {
-    test('returns true if null is given as a subset and a superset.', async () => {
+  suite('null', (): void => {
+    test('returns true if null is given as a subset and a superset.', async (): Promise<void> => {
       const pairs = [
         { subset: null, superset: null }
       ];
@@ -120,8 +101,8 @@ suite('isSubsetOf', () => {
     });
   });
 
-  suite('mixed', () => {
-    test('returns true if the given subset is actually a subset of the given superset.', async () => {
+  suite('mixed', (): void => {
+    test('returns true if the given subset is actually a subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: [], superset: [{ name: 'the native web' }]},
         { subset: [{ name: 'the native web' }], superset: [{ name: 'the native web' }]},
@@ -136,7 +117,7 @@ suite('isSubsetOf', () => {
       }
     });
 
-    test('returns false if the given subset is not a subset of the given superset.', async () => {
+    test('returns false if the given subset is not a subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: [{ name: 'the native web' }], superset: []},
         { subset: [{ name: 'the native web', city: 'Riegel am Kaiserstuhl' }], superset: [{ name: 'the native web' }]},
@@ -152,16 +133,16 @@ suite('isSubsetOf', () => {
     });
   });
 
-  suite('recursion', () => {
-    test('stops if recursion is detected.', async () => {
-      const subsetArray = [];
-      const supersetArray = [];
+  suite('recursion', (): void => {
+    test('stops if recursion is detected.', async (): Promise<void> => {
+      const subsetArray: any[] = [];
+      const supersetArray: any[] = [];
 
       subsetArray.push(subsetArray);
       supersetArray.push(supersetArray);
 
-      const subsetObject = {};
-      const supersetObject = {};
+      const subsetObject: { [key: string]: any | undefined } = {};
+      const supersetObject: { [key: string]: any | undefined } = {};
 
       subsetObject.key = subsetObject;
       supersetObject.key = supersetObject;
@@ -177,24 +158,8 @@ suite('isSubsetOf', () => {
     });
   });
 
-  suite('structural', () => {
-    test('is a function.', async () => {
-      assert.that(isSubsetOf.structural).is.ofType('function');
-    });
-
-    test('throws an error if the given subset is an unsupported type.', async () => {
-      assert.that(() => {
-        isSubsetOf.structural('the native web', {});
-      }).is.throwing(`Type 'string' is not supported.`);
-    });
-
-    test('throws an error if the given superset is an unsupported type.', async () => {
-      assert.that(() => {
-        isSubsetOf.structural({}, 42);
-      }).is.throwing(`Type 'number' is not supported.`);
-    });
-
-    test('returns true if the given subset is a structural subset of the given superset.', async () => {
+  suite('structural', (): void => {
+    test('returns true if the given subset is a structural subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: {}, superset: {}},
         { subset: {}, superset: { name: 'the native web' }},
@@ -212,7 +177,7 @@ suite('isSubsetOf', () => {
       }
     });
 
-    test('returns false if the given subset is not a structural subset of the given superset.', async () => {
+    test('returns false if the given subset is not a structural subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: { name: 'the native web' }, superset: {}},
         { subset: { name: 'the native web', city: 'Riegel am Kaiserstuhl' }, superset: { name: 'Intuity' }},
@@ -229,10 +194,10 @@ suite('isSubsetOf', () => {
       }
     });
 
-    suite('recursion', () => {
-      test('stops if recursion is detected.', async () => {
-        const subsetObject = { };
-        const supersetObject = { };
+    suite('recursion', (): void => {
+      test('stops if recursion is detected.', async (): Promise<void> => {
+        const subsetObject: { [key: string]: any | undefined } = {};
+        const supersetObject: { [key: string]: any | undefined } = {};
 
         subsetObject.key = subsetObject;
         supersetObject.key = supersetObject;

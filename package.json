@@ -16,13 +16,14 @@
       "email": "atheck@gmail.com"
     }
   ],
-  "main": "lib/isSubsetOf.js",
+  "main": "build/lib/isSubsetOf.js",
+  "types": "build/lib/isSubsetOf.d.ts",
   "dependencies": {
-    "typedescriptor": "1.1.0"
+    "typedescriptor": "2.0.0"
   },
   "devDependencies": {
-    "assertthat": "3.2.0",
-    "roboter": "6.1.0"
+    "assertthat": "3.3.0",
+    "roboter": "7.0.0"
   },
   "repository": {
     "type": "git",

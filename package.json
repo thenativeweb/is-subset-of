@@ -19,11 +19,11 @@
   "main": "build/lib/isSubsetOf.js",
   "types": "build/lib/isSubsetOf.d.ts",
   "dependencies": {
-    "typedescriptor": "2.0.1"
+    "typedescriptor": "2.0.4"
   },
   "devDependencies": {
     "assertthat": "4.0.2",
-    "roboter": "7.4.0"
+    "roboter": "7.5.0"
   },
   "repository": {
     "type": "git",

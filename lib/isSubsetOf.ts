@@ -3,8 +3,8 @@ import Type from 'typedescriptor';
 const allowedTypes = [ 'array', 'object', 'null' ];
 
 const isSubsetOf = function (
-  subset: [] | { [key: string]: any | undefined } | null,
-  superset: [] | { [key: string]: any | undefined } | null,
+  subset: any[] | { [key: string]: any | undefined } | null,
+  superset: any[] | { [key: string]: any | undefined } | null,
   visited: string[] = []
 ): boolean {
   const subsetType = Type.of(subset);

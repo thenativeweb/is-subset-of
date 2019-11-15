@@ -1,4 +1,4 @@
-import Type from 'typedescriptor';
+import { Type } from 'typedescriptor';
 
 const allowedTypes = [ 'array', 'object', 'null' ];
 
@@ -161,4 +161,4 @@ isSubsetOf.structural = function (
   return true;
 };
 
-export default isSubsetOf;
+export { isSubsetOf };

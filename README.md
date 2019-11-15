@@ -23,13 +23,13 @@ $ npm install is-subset-of
 First you need to add a reference to is-subset-of to your application:
 
 ```javascript
-const isSubsetOf = require('is-subset-of').default;
+const { isSubsetOf } = require('is-subset-of');
 ```
 
 If you use TypeScript, use the following code instead:
 
 ```typescript
-import isSubsetOf from 'is-subset-of';
+import { isSubsetOf } from 'is-subset-of';
 ```
 
 Then you can verify if an array or an object is a subset of another array or object by calling the `isSubsetOf` function and handing over the arrays or objects:

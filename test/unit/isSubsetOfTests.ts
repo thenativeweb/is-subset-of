@@ -1,5 +1,5 @@
-import assert from 'assertthat';
-import isSubsetOf from '../../lib/isSubsetOf';
+import { assert } from 'assertthat';
+import { isSubsetOf } from '../../lib/isSubsetOf';
 
 suite('isSubsetOf', (): void => {
   test('throws an error if the given subset and superset are of distinct types.', async (): Promise<void> => {

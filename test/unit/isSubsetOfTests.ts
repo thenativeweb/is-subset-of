@@ -31,6 +31,17 @@ suite('isSubsetOf', (): void => {
       }
     });
 
+    test('returns true if functions are contained that are equal according to toString().', async (): Promise<void> => {
+      const pairs = [
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type,@typescript-eslint/no-empty-function
+        { subset: [ () => {} ], superset: [ () => {} ]}
+      ];
+
+      for (const { subset, superset } of pairs) {
+        assert.that(isSubsetOf(subset, superset)).is.true();
+      }
+    });
+
     test('returns false if the given subset is not a subset of the given superset.', async (): Promise<void> => {
       const pairs = [
         { subset: [ 2 ], superset: []},
@@ -63,6 +74,17 @@ suite('isSubsetOf', (): void => {
         { subset: {}, superset: { name: { full: 'the native web', abbreviation: 'tnw' }}},
         { subset: { name: { full: 'the native web', abbreviation: 'tnw' }}, superset: { name: { full: 'the native web', abbreviation: 'tnw' }}},
         { subset: { name: { full: 'the native web' }}, superset: { name: { full: 'the native web', abbreviation: 'tnw' }}}
+      ];
+
+      for (const { subset, superset } of pairs) {
+        assert.that(isSubsetOf(subset, superset)).is.true();
+      }
+    });
+
+    test('returns true if functions are contained that are equal according to toString().', async (): Promise<void> => {
+      const pairs = [
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type,@typescript-eslint/no-empty-function
+        { subset: { foo () {} }, superset: { foo () {} }}
       ];
 
       for (const { subset, superset } of pairs) {

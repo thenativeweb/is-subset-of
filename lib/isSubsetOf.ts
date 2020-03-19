@@ -1,6 +1,6 @@
 import { Type } from 'typedescriptor';
 
-const allowedTypes = [ 'array', 'object', 'null' ];
+const allowedTypes = [ 'array', 'object', 'function', 'null' ];
 
 const isSubsetOf = function (
   subset: any[] | { [key: string]: any | undefined } | null,
@@ -15,6 +15,14 @@ const isSubsetOf = function (
   }
   if (!allowedTypes.includes(supersetType)) {
     throw new Error(`Type '${supersetType}' is not supported.`);
+  }
+
+  if (Type.isFunction(subset)) {
+    if (!Type.isFunction(superset)) {
+      throw new Error(`Types '${subsetType}' and '${supersetType}' do not match.`);
+    }
+
+    return subset.toString() === superset.toString();
   }
 
   if (Type.isArray(subset)) {
@@ -32,7 +40,8 @@ const isSubsetOf = function (
 
       switch (subsetItemType) {
         case 'array':
-        case 'object': {
+        case 'object':
+        case 'function': {
           if (visited.includes(subsetItem)) {
             continue;
           }
@@ -78,7 +87,8 @@ const isSubsetOf = function (
 
       switch (subsetValueType) {
         case 'array':
-        case 'object': {
+        case 'object':
+        case 'function': {
           if (visited.includes(subsetValue)) {
             continue;
           }

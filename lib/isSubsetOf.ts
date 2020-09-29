@@ -1,6 +1,6 @@
 import { Type } from 'typedescriptor';
 
-const allowedTypes = [ 'array', 'object', 'function', 'null' ];
+const allowedTypes = new Set([ 'array', 'object', 'function', 'null' ]);
 
 const isSubsetOf = function (
   subset: any[] | { [key: string]: any | undefined } | null,
@@ -10,10 +10,10 @@ const isSubsetOf = function (
   const subsetType = Type.of(subset);
   const supersetType = Type.of(superset);
 
-  if (!allowedTypes.includes(subsetType)) {
+  if (!allowedTypes.has(subsetType)) {
     throw new Error(`Type '${subsetType}' is not supported.`);
   }
-  if (!allowedTypes.includes(supersetType)) {
+  if (!allowedTypes.has(supersetType)) {
     throw new Error(`Type '${supersetType}' is not supported.`);
   }
 

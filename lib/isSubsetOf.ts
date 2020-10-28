@@ -3,8 +3,8 @@ import { Type } from 'typedescriptor';
 const allowedTypes = new Set([ 'array', 'object', 'function', 'null' ]);
 
 const isSubsetOf = function (
-  subset: any[] | { [key: string]: any | undefined } | null,
-  superset: any[] | { [key: string]: any | undefined } | null,
+  subset: any[] | Record<string, any | undefined> | null,
+  superset: any[] | Record<string, any | undefined> | null,
   visited: string[] = []
 ): boolean {
   const subsetType = Type.of(subset);
@@ -129,8 +129,8 @@ const isSubsetOf = function (
 };
 
 isSubsetOf.structural = function (
-  subset: { [key: string]: any } | null,
-  superset: { [key: string]: any } | null,
+  subset: Record<string, any> | null,
+  superset: Record<string, any> | null,
   visited: string[] = []
 ): boolean {
   if (!Type.isObject(subset)) {

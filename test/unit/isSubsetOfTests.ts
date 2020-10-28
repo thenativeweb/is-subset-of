@@ -163,8 +163,8 @@ suite('isSubsetOf', (): void => {
       subsetArray.push(subsetArray);
       supersetArray.push(supersetArray);
 
-      const subsetObject: { [key: string]: any | undefined } = {};
-      const supersetObject: { [key: string]: any | undefined } = {};
+      const subsetObject: Record<string, any | undefined> = {};
+      const supersetObject: Record<string, any | undefined> = {};
 
       subsetObject.key = subsetObject;
       supersetObject.key = supersetObject;
@@ -218,8 +218,8 @@ suite('isSubsetOf', (): void => {
 
     suite('recursion', (): void => {
       test('stops if recursion is detected.', async (): Promise<void> => {
-        const subsetObject: { [key: string]: any | undefined } = {};
-        const supersetObject: { [key: string]: any | undefined } = {};
+        const subsetObject: Record<string, any | undefined> = {};
+        const supersetObject: Record<string, any | undefined> = {};
 
         subsetObject.key = subsetObject;
         supersetObject.key = supersetObject;

@@ -58,9 +58,7 @@ const isSubsetOf = function (
           break;
         }
         default: {
-          isItemInSuperset = superset.some(
-            (supersetItem: any): boolean => subsetItem === supersetItem
-          );
+          isItemInSuperset = superset.includes(subsetItem);
         }
       }
 

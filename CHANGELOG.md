@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/thenativeweb/is-subset-of/compare/3.1.2...3.1.3) (2021-03-25)
+
+
+### Bug Fixes
+
+* Migrate from master to main. ([#279](https://github.com/thenativeweb/is-subset-of/issues/279)) ([b136e78](https://github.com/thenativeweb/is-subset-of/commit/b136e78398f95e402a3d5f12b7c4037c59aad44e))
+
 ## [3.1.2](https://github.com/thenativeweb/is-subset-of/compare/3.1.1...3.1.2) (2020-11-03)
 
 

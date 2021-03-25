@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/thenativeweb/is-subset-of/compare/3.1.3...3.1.4) (2021-03-25)
+
+
+### Bug Fixes
+
+* bump typedescriptor from 3.0.1 to 3.0.2 ([#282](https://github.com/thenativeweb/is-subset-of/issues/282)) ([fa47d0e](https://github.com/thenativeweb/is-subset-of/commit/fa47d0e54b8a34380af73ca2f80576b7a1817962))
+
 ## [3.1.3](https://github.com/thenativeweb/is-subset-of/compare/3.1.2...3.1.3) (2021-03-25)
 
 

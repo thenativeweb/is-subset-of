@@ -1,3 +1,10 @@
+## [3.1.5](https://github.com/thenativeweb/is-subset-of/compare/3.1.4...3.1.5) (2021-05-11)
+
+
+### Bug Fixes
+
+* bump hosted-git-info from 2.8.8 to 2.8.9 ([#297](https://github.com/thenativeweb/is-subset-of/issues/297)) ([5c33896](https://github.com/thenativeweb/is-subset-of/commit/5c33896fadb911e7bb4240e672cad982eed7a1b6))
+
 ## [3.1.4](https://github.com/thenativeweb/is-subset-of/compare/3.1.3...3.1.4) (2021-03-25)
 
 

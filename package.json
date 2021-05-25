@@ -19,7 +19,7 @@
   "main": "build/lib/isSubsetOf.js",
   "types": "build/lib/isSubsetOf.d.ts",
   "dependencies": {
-    "typedescriptor": "3.0.2"
+    "typedescriptor": "4.0.3"
   },
   "devDependencies": {
     "assertthat": "6.2.1",

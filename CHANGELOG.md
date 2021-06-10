@@ -1,3 +1,17 @@
+## [3.1.7](https://github.com/thenativeweb/is-subset-of/compare/3.1.6...3.1.7) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump normalize-url from 6.0.0 to 6.0.1 ([#314](https://github.com/thenativeweb/is-subset-of/issues/314)) ([d889897](https://github.com/thenativeweb/is-subset-of/commit/d8898975d23d6b420c023cd56509fe65abdb6001))
+
+## [3.1.6](https://github.com/thenativeweb/is-subset-of/compare/3.1.5...3.1.6) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump trim-newlines from 3.0.0 to 3.0.1 ([#315](https://github.com/thenativeweb/is-subset-of/issues/315)) ([58ab908](https://github.com/thenativeweb/is-subset-of/commit/58ab9087dfd4b2ea879ae75945e700be403b1854))
+
 ## [3.1.5](https://github.com/thenativeweb/is-subset-of/compare/3.1.4...3.1.5) (2021-05-11)
 
 

@@ -1,3 +1,10 @@
+## [3.1.8](https://github.com/thenativeweb/is-subset-of/compare/3.1.7...3.1.8) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump glob-parent from 5.1.1 to 5.1.2 ([#313](https://github.com/thenativeweb/is-subset-of/issues/313)) ([87109f0](https://github.com/thenativeweb/is-subset-of/commit/87109f0657fd317bd5c76128d031ad0b1be404db))
+
 ## [3.1.7](https://github.com/thenativeweb/is-subset-of/compare/3.1.6...3.1.7) (2021-06-10)
 
 

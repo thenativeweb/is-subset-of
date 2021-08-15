@@ -1,3 +1,10 @@
+## [3.1.9](https://github.com/thenativeweb/is-subset-of/compare/3.1.8...3.1.9) (2021-08-15)
+
+
+### Bug Fixes
+
+* bump path-parse from 1.0.6 to 1.0.7 ([#334](https://github.com/thenativeweb/is-subset-of/issues/334)) ([183a82c](https://github.com/thenativeweb/is-subset-of/commit/183a82cc9b166ccb08ff03732c506bebac63113f))
+
 ## [3.1.8](https://github.com/thenativeweb/is-subset-of/compare/3.1.7...3.1.8) (2021-06-10)
 
 

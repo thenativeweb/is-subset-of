@@ -19,15 +19,12 @@
   "private": false,
   "main": "build/lib/isSubsetOf.js",
   "types": "build/lib/isSubsetOf.d.ts",
-  "engines": {
-    "node": ">= 16.7.0"
-  },
   "dependencies": {
     "typedescriptor": "3.0.2"
   },
   "devDependencies": {
     "assertthat": "6.3.13",
-    "roboter": "12.1.1",
+    "roboter": "12.1.2",
     "semantic-release-configuration": "2.0.5"
   },
   "scripts": {},

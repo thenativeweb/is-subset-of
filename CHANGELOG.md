@@ -1,3 +1,10 @@
+## [3.1.10](https://github.com/thenativeweb/is-subset-of/compare/3.1.9...3.1.10) (2021-08-24)
+
+
+### Bug Fixes
+
+* add exclude to tsconfig.json, remove engine constraint ([#339](https://github.com/thenativeweb/is-subset-of/issues/339)) ([b8c649f](https://github.com/thenativeweb/is-subset-of/commit/b8c649f91d9019e37328d282cd629ec0608ca2d0))
+
 ## [3.1.9](https://github.com/thenativeweb/is-subset-of/compare/3.1.8...3.1.9) (2021-08-15)
 
 
